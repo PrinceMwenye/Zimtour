@@ -1,0 +1,44 @@
+body {
+    background-image: url("images/Masvingosunrise.jpg");
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+@media screen and (min-width:990px) {
+    .main-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 150px;
+    }
+    .masvingo>img,
+    figure>img {
+        border-radius: 50%;
+        height: 250px;
+    }
+    figcaption {
+        text-align: center;
+        color: black;
+    }
+    .motto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+    }
+    .travel-eat {
+        padding-top: 20%;
+        ;
+    }
+    /* Try this one when sober */
+    /* img {
+        opacity: 0.5;
+    }
+    img:hover {
+        opacity: 1.0;
+    } */
+}
+
+
+/* @media screen and (max-width:989px) {} */
