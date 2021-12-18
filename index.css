@@ -29,7 +29,6 @@ body {
     }
     .travel-eat {
         padding-top: 20%;
-        ;
     }
     /* Try this one when sober */
     /* img {
@@ -40,5 +39,10 @@ body {
     } */
 }
 
-
-/* @media screen and (max-width:989px) {} */
+@media screen and (max-width:989px) {
+    .masvingo>img,
+    figure>img {
+        border-radius: 50%;
+        height: 250px;
+    }
+}
