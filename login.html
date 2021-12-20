@@ -42,7 +42,6 @@
 
 
 
-
     <div id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
 
@@ -56,7 +55,25 @@
                     // User successfully signed in.
                     // Return type determines whether we continue the redirect automatically
                     // or whether we leave that to developer to handle.
-                    return true;
+                    var user = authResult.user;
+
+                    // determine wherther the use is a new user or not
+                    if (authResult.additionalUserInfo.isNewUser) {
+                        db.collection("users").doc(user.uid).set({
+                                name: user.displayName,
+                                email: user.email
+                            }).then(function() {
+                                window.location.assign("index.html");
+                            })
+                            .catch(function(error) {
+                                console.log("erros is" + error);
+                            })
+
+                    } else {
+                        return true;
+
+                    }
+                    return false;
                 },
                 uiShown: function() {
                     // The widget is rendered.
@@ -68,11 +85,7 @@
             signInFlow: 'popup',
             signInSuccessUrl: 'index.html',
             signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-                //firebase.auth.GithubAuthProvider.PROVIDER_ID,
+
                 firebase.auth.EmailAuthProvider.PROVIDER_ID,
                 //firebase.auth.PhoneAuthProvider.PROVIDER_ID
             ],
@@ -85,7 +98,6 @@
         // The start method will wait until the DOM is loaded.
         ui.start('#firebaseui-auth-container', uiConfig);
     </script>
-
 
 
 
