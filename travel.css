@@ -1,0 +1,27 @@
+    @media only screen and (min-width: 991px) {
+        .main-destinations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            align-items: center;
+            grid-gap: 1em;
+        }
+    }
+    
+    @media only screen and (max-width: 991px) and (min-width: 660px) {
+        .main-destinations {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+    }
+    
+    @media only screen and (max-width: 659px) {
+        .main-destinations {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+            align-items: center;
+        }
+    }
