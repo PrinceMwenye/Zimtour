@@ -1,15 +1,19 @@
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 100%);
+    }
 }
 
-.bouncy {
-    animation: bouncy 5s infinite linear;
-    position: relative;
+@media only screen and (min-width: 481px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
 }
 
-a.button2 {
+.button2 {
     display: inline-block;
     padding: 0.5em 3em;
     border: 0.16em solid #0f0f0f;
@@ -24,31 +28,32 @@ a.button2 {
     transition: all 0.15s;
 }
 
-a.button2:hover {
+.button2:hover {
     color: #751515;
     border-color: #111111;
 }
 
-a.button2:active {
+.button2:active {
     color: #BBBBBB;
     border-color: #0c0c0c;
-}
-
-@media all and (max-width:30em) {
-    a.button2 {
-        display: block;
-        margin: 0.4em auto;
-    }
 }
 
 .harare-img {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: minmax(auto, 300px);
+    justify-items: center;
 }
 
 #harare {
     border-radius: 50%;
-    width: 100%;
+    width: 50%;
     height: auto;
+}
+
+@media all and (max-width:30em) {
+    .button2 {
+        display: block;
+        margin: 0.4em auto;
+    }
 }
