@@ -1,10 +1,10 @@
-/* body {
+body {
     background-image: url("images/Masvingosunrise.jpg");
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-} */
+}
 
 @media screen and (min-width:990px) {
     .masvingo>img,
