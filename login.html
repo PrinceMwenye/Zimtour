@@ -11,7 +11,8 @@
     <link rel="icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
-
+    <!-- Google Material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- For log-in animation -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
@@ -44,11 +45,26 @@
 </head>
 
 <body>
+<!-- <div id = "heading"><h1>Zimtour</h1></div> -->
+<header>
+	<div class="overlay">
+<h1>Zimtour</h1>
+<h3>Ready to Explore Zimbabwe?</h3>
+<p></p>
+	<br>
+	<button onclick = "read_display_fact()">Check today's fun fact</button>
+		</div>
+</header>
 
 
+<div><p id = "fact-goes-here"></p></div>
 
     <div class = "log-in" id="firebaseui-auth-container"></div>
     <div id="loader">Loading...</div>
+
+
+
+
 
 
     <script>
@@ -105,6 +121,31 @@
     </script>
 
 
+
+<script>
+
+    days = {
+        0:"Sunday",
+        1:"Monday",
+        2: "Tuesday",
+        3: "Weddnesday",
+        4: "Thursday",
+        5: "Friday",
+        6:"Saturday"
+    }
+
+    var today = new Date();
+    var dayOfWeek = days[today.getDay()];
+  
+
+    function read_display_fact() {
+        
+        db.collection("Facts").doc(dayOfWeek)
+        .onSnapshot(TuesdayDoc => {
+            document.getElementById("fact-goes-here").innerHTML = TuesdayDoc.data().fact;
+        })
+    }
+</script>
 
     <script src="login.js"></script>
 

@@ -34,15 +34,15 @@ insertName();
 
 // Change background based on time
 
-function setbackgroundImg() {
-    var today = new Date();
-    var time = today.getHours();
-    // console.log(time)
-    if (time > 6 && time < 18) {
-        document.body.style.backgroundImage = "url('images/mazoedam.jpg')";
-    } else if (time >= 18 && time <= 6) {
-        document.body.style.backgroundImage = "url('images/Masvingosunrise.jpg')";
-    }
-}
+// function setbackgroundImg() {
+//     var today = new Date();
+//     var time = today.getHours();
+//     // console.log(time)
+//     if (time > 6 && time < 18) {
+//         document.body.style.backgroundImage = "url('images/mazoedam.jpg')";
+//     } else if (time >= 18 && time <= 6) {
+//         document.body.style.backgroundImage = "url('images/Masvingosunrise.jpg')";
+//     }
+// }
 
-setbackgroundImg();
+// setbackgroundImg();
