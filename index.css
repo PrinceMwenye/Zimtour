@@ -50,3 +50,26 @@ body {
         padding-top: 5px;
     }
 }
+
+
+.sign-up {
+    background-color: white;
+    color: black;
+    border: 2px solid #456845; /* Green */
+   
+  }
+
+  
+  a.button:hover{
+    background: #383;
+}
+
+
+.button {
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
