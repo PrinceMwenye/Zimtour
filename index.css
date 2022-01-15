@@ -28,19 +28,26 @@ body {
         margin-top: 150px;
         padding-top: 50px;
     }
-    /* Try this one when sober */
-    /* img {
-        opacity: 0.5;
+
+    p {
+        font-size:20px;
     }
-    img:hover {
-        opacity: 1.0;
-    } */
+
+    figcaption {
+        font-size:20px;
+    }
+
+
+    h2{font-size:30px;}
+        
+    
+  
 }
 
 @media screen and (max-width:989px) {
     .masvingo>img,
     figure>img {
-        border-radius: 50%;
+        border-radius: 10%;
         height: 250px;
     }
     .travel-eat {
@@ -48,6 +55,8 @@ body {
         grid-template-columns: repeat(1, 100%);
         margin-top: 150px;
         padding-top: 5px;
+        justify-content: center;
+        justify-items: center;
     }
 }
 
