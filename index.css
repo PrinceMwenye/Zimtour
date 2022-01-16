@@ -6,22 +6,30 @@ body {
     width: 100%;
 }
 
+
+
+
+
 @media screen and (min-width:990px) {
+
     .masvingo>img,
     figure>img {
         border-radius: 50%;
         height: 250px;
     }
+
     figcaption {
         text-align: center;
         color: black;
     }
+
     .motto {
         display: grid;
         justify-content: center;
         align-items: center;
         height: 200px;
     }
+
     .travel-eat {
         display: grid;
         grid-template-columns: repeat(3, 3fr);
@@ -30,26 +38,30 @@ body {
     }
 
     p {
-        font-size:20px;
+        font-size: 20px;
     }
 
     figcaption {
-        font-size:20px;
+        font-size: 20px;
     }
 
 
-    h2{font-size:30px;}
-        
-    
-  
+    h2 {
+        font-size: 30px;
+    }
+
+
+
 }
 
 @media screen and (max-width:989px) {
+
     .masvingo>img,
     figure>img {
         border-radius: 10%;
         height: 250px;
     }
+
     .travel-eat {
         display: grid;
         grid-template-columns: repeat(1, 100%);
@@ -64,21 +76,23 @@ body {
 .sign-up {
     background-color: white;
     color: black;
-    border: 2px solid #456845; /* Green */
-   
-  }
+    border: 2px solid #456845;
+    /* Green */
 
-  
-  a.button:hover{
+}
+
+
+a.button:hover {
     background: #383;
 }
 
 
 .button {
     transition-duration: 0.4s;
-  }
-  
-  .button:hover {
-    background-color: #4CAF50; /* Green */
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    /* Green */
     color: white;
-  }
+}

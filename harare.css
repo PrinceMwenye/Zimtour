@@ -13,36 +13,13 @@
     }
 }
 
-.button2 {
-    display: inline-block;
-    padding: 0.5em 3em;
-    border: 0.16em solid #0f0f0f;
-    margin: 0 0.3em 0.3em 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    color: #a81b1b;
-    text-align: center;
-    transition: all 0.15s;
-}
-
-.button2:hover {
-    color: #751515;
-    border-color: #111111;
-}
-
-.button2:active {
-    color: #BBBBBB;
-    border-color: #0c0c0c;
-}
-
 .harare-img {
     display: grid;
     grid-template-columns: 100%;
     grid-auto-rows: minmax(auto, 300px);
     justify-items: center;
+    height: 100px;
+
 }
 
 #harare {
@@ -57,3 +34,26 @@
         margin: 0.4em auto;
     }
 }
+
+button {
+    background-color: white;
+}
+
+button:hover {
+    background-color: black;
+    font-size: 30px;
+    color: white;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+/* .hotels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+
+} */
