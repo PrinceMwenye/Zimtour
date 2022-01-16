@@ -46,7 +46,8 @@ button:hover {
 }
 
 h1,
-h3 {
+h3,
+h2 {
     text-align: center;
 }
 
@@ -57,3 +58,12 @@ h3 {
     align-content: center;
 
 } */
+
+
+img {
+    height: 50%;
+}
+
+img:hover {
+    opacity: 0.34;
+}
